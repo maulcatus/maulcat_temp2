@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>y2day</title>
+    <style>
+        p {
+            font-size: 64px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <p>REDIRECTING...</p>
+    <script>
+        const fs = require('fs');
+        let _data;
+        fs.readFile('y2day-promo-viewers.txt', (err, data) => {
+            if (err) throw err;
+            _data = data;
+        });
+        _data++;
+        fetch("y2day-promo-viewers.txt")
+            .then((res) => res.text())
+            .then((text) => {
+                _data = data;
+            })
+            .catch((e) => console.error(e));
+        window.location = "https://haiipara.bandcamp.com/album/y2day-2";
+    </script>
+</body>
+</html>

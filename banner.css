@@ -1,0 +1,99 @@
+* {
+    image-rendering: pixelated;
+}
+:root {
+    --dvd-size-scale: 0.8;
+}
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+}
+body {
+    background: black;
+    color: white;
+    margin: 0 auto;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 50px;
+    padding-top: 0px;
+    width: 841px;
+    letter-spacing: -0.3px;
+}
+.head {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 253px;
+    border-bottom: 1px solid white;
+    margin: 8px 0px 7px 0px;
+}
+.left {
+    width: 85px;
+    float: left;
+}
+.right {
+    float: left;
+    width: 756px;
+    height: 253px;
+}
+.upper-logotype {
+    width: 85px;
+    height: 157px;
+}
+.upper-logo, #black {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 96px;
+    width: 85px;
+    border: 1.8px solid white;
+    margin-top: -4px;
+}
+.logo-dvd {
+    width: 49px;
+    height: 56px;
+}
+.marquee {
+    margin-bottom: 9px;
+    width: 841px;
+}
+#dvd {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    background-repeat: no-repeat;
+    background-size: 75px;
+    background-position: center;
+}
+.banner, .banner-bottom {
+    width: 756px;
+    max-height: 100%;
+    border-bottom: 2px white solid;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transform: translateY(-46px);
+}
+.banner-bottom {
+    z-index: -1;
+    position: relative;
+    top: -256px;
+    height: 252px;
+}
+@keyframes banner_top {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes banner_bottom {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+#cc {
+    width: 240px;
+    filter: hue-rotate(-10deg);
+    position: relative;
+    z-index: 20;
+    top: 10px;
+    left: 515px;
+    border: 1px white dotted;
+    border-right: none;
+}

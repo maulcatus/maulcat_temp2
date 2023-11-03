@@ -1,0 +1,26 @@
+{
+    "albumID": "MC030",
+    "artist": "Silver October",
+    "artistID": "00",
+    "title": "All World and the Glass Room ('23 Reissue)",
+    "tracklist": [
+        {
+            "title": "Teatree All-World-Relation",
+            "duration": 331,
+            "ISRC": "QZMEP2315336",
+            "lyrics": "See, I told them we should just like, drive to someone's garage and be like, \"hey, pay you a buck\"\nTo what?\n\nThe shadow... of your smile\n\nThere is no other side,\nThis is it.",
+            "trackID": "030_0",
+            "subtext": "",
+            "sublist": ""
+        },
+        {
+            "title": "Sweet Blood",
+            "duration": 312,
+            "ISRC": "yea",
+            "lyrics": "",
+            "trackID": "030_1",
+            "subtext": "feat. Snifo",
+            "sublist": ""
+        }
+    ]
+}

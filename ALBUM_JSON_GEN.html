@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverside Tools</title>
+</head>
+<body>
+    <style>
+        .header {
+            width: 600px;
+            margin-top: 10px;
+        }
+        .subhead {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        form {
+            width: 600px;
+            display: inline-block;
+            outline: 1px solid black;
+        }
+        #title {
+            width: 400px;
+        }
+        label {
+            font-weight: bold;
+        }
+        i:not(i.o) {
+            font-weight: 500;
+            font-size: 10px;
+        }
+        #artistID {
+            width: 30px;
+        }
+        .trackArtistContainer #artistID {
+            width: 30px;
+        }
+        .trackArtistContainer #artist {
+            width: 140px;
+        }
+        .trackArtistContainer #alias {
+            width: 140px;
+        }
+        #trackID {
+            width: 60px;
+        }
+        #ISRC {
+            width: 100px;
+        }
+        .cover {
+            width: 300px;
+            height: 300px;
+            border: 1px dashed black;
+        }
+        .h2 {
+            width: 300px;
+            margin-top: 12px;
+        }
+        .track {
+            background: lightgray;
+            margin-bottom: 16px;
+        }
+        hr {
+            border-top: 1px solid black;
+            border-bottom: none;
+        }
+        .sitelink {
+            width: 150px;
+            margin-bottom: -10px;
+            margin-top: 10px;
+        }
+        ._sitelink {
+            width: 100vw;
+        }
+        .submit {
+            width: 200px;
+            margin: 0 auto;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        form, .artistIDs {
+            float: left;
+        }
+    </style>
+    <a href="index.html" class="_sitelink">
+        <img src="img/server_tools/mainsitelink_0.png" alt="" class="sitelink">
+    </a><br>
+    <img src="img/server_tools/jsonHEAD.png" alt="" class="header">erator
+    <p class="subhead">this is an open-source SERVER-SIDE TOOL all rights reserved (c) 2023 Syd Suffridge<br>d.b.a. Maulcat f.k.a. Maulcat Records, llc.</p>
+    <hr>
+    <div class="container">
+    <form action="server_newAlbum.php" method="get">
+        <label for="artist">
+            ARTIST <i>(not incl. alias)</i>
+        </label>
+        <input type="text" name="artist" id="artist" />
+        <label for="alias">alias:</label>
+        <input type="text" name="alias" id="alias" />
+        <label for="artistID">ID:</label>
+        <input type="text" name="artistID" id="artistID" />
+        <br>
+        <span><b>NOTE:</b> if artist ID is not input it will be automatically assigned. refer to <i class="o"><a href="#artistIDs">list</a></i> for current IDs.</span>
+        <hr>
+        <label for="albumID">
+            ALBUM ID <i>(typically cat number)</i>
+        </label>
+        MC<input type="text" name="albumID" id="albumID" />
+        <br>
+        <label for="title">ALBUM TITLE</label>
+        <input type="text" name="title" id="title" />
+        <br>
+        <label for="release">RELEASE DATE</label>
+        <input type="date" name="release" id="release" />
+        <hr>
+        <label for="cover">
+            COVER <i>(at least 1800x1800 required, .PNG)</i>
+        </label>
+        <input type="file" name="cover" id="cover" accept="image/png">
+        <img src="img/server_tools/placeholder.png" alt="Cover" class="cover">
+        <img src="img/server_tools/h2.png" alt="Tracklist header" class="h2">
+        <label for="compilationBox">compilation: </label>
+        <input type="checkbox" name="compilation" id="compilationBox" onclick="toggleCompilation()">
+        <ol class="tracklist">
+            <li class="track" id="track1Container">
+                <section class="trackArtistContainer" style="display:none;">
+                    <label for="track1Artist">ARTIST <i>(not incl. alias)</i></label>
+                    <input type="text" name="track1Artist" id="artist" />
+                    <label for="track1Alias">alias:</label>
+                    <input type="text" name="track1Alias" id="alias" />
+                    <label for="track1ArtistID">ID:</label>
+                    <input type="text" name="track1ArtistiD" id="artistID" />
+                    <br><hr>
+                </section>
+                <label for="track1Title">title: </label>
+                <input type="text" name="track1Title" id="trackTitle" />
+                
+                <label for="track1Subtext">subtext: </label>
+                <input type="text" name="track1Subtext" id="trackSubtext" />
+                <label for="track1ID">ID: </label>
+                <input type="text" name="track1ID" id="trackID" />
+                <br>
+
+                <label for="1ISRC">ISRC:</label>
+                <input type="text" name="1ISRC" id="ISRC" />
+                <label for="1instrumentalBox">instrumental?: </label>
+                <input type="checkbox" name="1instrumentalBox" id="instrumentalBox" />
+                <label for="track1Sublist">sublist: </label>
+                <input type="text" name="track1Sublist" id="trackSublist" />
+
+                <br><hr>
+                <label for="1lyrics">lyrics: </label>
+                <textarea name="1lyrics" id="lyrics" cols="50" rows="5"></textarea>
+                <button id="addTrack">+ track</button>
+                <button id="removeTrack">X</button>
+            </li>
+        </ol>
+        <input type="submit" class="submit" id="submit">
+    </form>
+
+    <iframe src="ALBUM_JSON_TABLE.html" frameborder="0" id="artistIDs" height="800px"></iframe>
+    </div>
+
+    <script src="jq.js"></script>
+    <script>
+        document.querySelector(".sitelink").onmouseover = function() {
+            this.src = "img/server_tools/mainsitelink_1.png";
+        }
+        document.querySelector(".sitelink").onmouseleave = function() {
+            this.src = "img/server_tools/mainsitelink_0.png";
+        }
+        let coverUpload = document.querySelector("#cover");
+        let coverIMG = document.querySelector("img.cover");
+        coverUpload.onclick = () => {
+            coverIMG.src = "img/server_tools/uploading.png";
+        }
+        coverUpload.onchange = () => {
+            console.log(coverUpload.files[0]);
+            coverIMG.src = URL.createObjectURL(coverUpload.files[0]);
+        }
+
+        let tracks;
+        function toggleCompilation() {
+            // toggle track artist boxes.
+            tracks = document.querySelectorAll("li.track");
+            for (var i = 0; i < tracks.length; i++) {
+                if (tracks[i].children[0].style.display == "none") {
+                    tracks[i].children[0].style.display = "block";
+                } else {
+                    tracks[i].children[0].style.display = "none";
+                }
+            }
+        }
+        let child;
+        function addTrack(e) {
+            e.preventDefault();
+            // add another track info box.
+            // $("li#track1Container").clone(true).appendTo("ol.tracklist");
+            id = $("ol.tracklist").children().length + 1;
+            $("ol.tracklist").append(`<li class="track" id="track${id}Container">
+                ${$("li#track1Container").html().replaceAll("1", id)}
+            </li>`);
+            $("*").filter("#addTrack").on("click", addTrack);
+        }
+
+        function removeTrack(x,e) {
+            e.preventDefault();
+            
+        }
+        $("*").filter("#addTrack").on("click", addTrack);
+    </script>
+</body>
+</html>

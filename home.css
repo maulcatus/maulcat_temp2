@@ -1,0 +1,90 @@
+
+.newslet {
+    width: 459px;
+    background: linear-gradient(#111933, #02222f);
+    border-radius: 2px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'helvetica';
+    margin-bottom: 16px;
+}
+.newsletIMG {
+    outline: 1px white dotted;
+    width: 102%;
+    margin: 2px;
+    margin-left: -5px;
+    margin-bottom: 12px;
+}
+.type {
+    width: 130px;
+    padding-top: 12px;
+    padding-right: 5px;
+}
+.headline {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Univers UC";
+    letter-spacing: 0.01em;
+    font-weight: 500;
+}
+.ffo, .from {
+    margin-top: 4px;
+    color: #fff;
+    opacity: 0.5;
+    font-size: 19px;
+    line-height: 1.1;
+    font-family: "Univers";
+    letter-spacing: 0.02em;
+}
+.desc {
+    margin-top: -6px;
+    line-height: 1.2;
+    font-size: 19px;
+    width: 1060px;
+    font-family: "Times New Roman";
+    transform: scaleX(0.8) translateX(-135px);
+}
+#mmnewslet {
+    background: #15171d;
+}
+#mv-c2m {
+    outline: 1.3px dotted white;
+}
+.warninghead {
+    font-size: 18px;
+    font-family: "Helvetica";
+    width: 100%;
+    font-weight: 200;
+    background: #02222f;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+    color: white;
+}
+.warninghead a {
+    color: #425593;
+}
+a {
+    color: #425593;
+}
+a:hover { 
+    color: white;
+}
+.newbadge {
+    background: red;
+    width: 150px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Univers";
+    font-weight: 600;
+    font-stretch: condensed;
+    transform: rotate(45deg) translateX(135px) translateY(-890px);
+}
+.videoDIV {
+    overflow: hidden;
+    width: 843px;
+    height: 561px;
+    padding: 1px;
+}

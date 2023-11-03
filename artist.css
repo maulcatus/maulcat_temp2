@@ -1,0 +1,95 @@
+.FeaturedArtist {
+    width: 416px;
+    height: 345px;
+    overflow: hidden;
+}
+.featuredContainer {
+    display: grid;
+    width: 850px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.featuredArtistLogo {
+    z-index: 6;
+    position: relative;
+    pointer-events: none;
+    transition: 0.07s;
+}
+
+#s3co {
+    width: 337px;
+    left: 38px;
+}
+#zwei {
+    width: 177px;
+    left: 23.5px;
+}
+
+.blub {
+    color: white;
+    position: relative;
+    top: -850px;
+    text-align: center;
+    font-family: "Arial Narrow";
+    letter-spacing: -0.04em;
+    opacity: 0;
+    z-index: 9;
+    transition: 0.78s;
+}
+
+#zb {
+    top: -697px;
+}
+
+.seeMore {
+    height: 277px;
+    z-index: 5;
+    position: relative;
+    pointer-events: none;
+    transition: 0.12s;
+    top: -558px;
+    left: -100px;
+}
+
+.ArtistIMG {
+    height: 400px;
+    object-fit: cover;
+}
+#bg {
+    width: 840px;
+    opacity: 0.5;
+    z-index: -3;
+    position: fixed;
+}
+#ag {
+    width: 840px; 
+    height: 98px;
+    margin-top: -19px; 
+    z-index: -1; 
+    position: relative;
+    object-fit: cover;
+}
+.roster {
+    display: grid;
+    width: 800px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.Artist {
+    background: red;
+    width: 275.7px;
+    height: 184px;
+    margin-right: 7px;
+    margin-bottom: 14px;
+}
+.artistIMG {
+    width: 100%;
+    height: 184px;
+    object-fit: cover;
+}
+.artistLogo {
+    width: 64%;
+    z-index: 6;
+    position: relative;
+    top: -229px;
+    left: 49px;
+}

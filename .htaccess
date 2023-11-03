@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine on
+
+# Remove .php file extension on requests
+RewriteRule ^(.+)\.html$ /$1 [R,L]
+
+# Specific rewrite for /Forum/Topic/N
+RewriteRule ^(album)/(\d+)$ $1.html?c=$2 [END]
+
+# Append .php extension for other requests
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.*?)/?$ /$1.html [END]

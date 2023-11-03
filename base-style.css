@@ -1,0 +1,166 @@
+html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: #040404;
+    color: white;
+    width: 875px;
+    margin: 0 auto;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 50px;
+    padding-top: 0px;
+    letter-spacing: -0.3px;
+    cursor: url('img/assets/cur.png'), url('img/assets/cur.jpg'), url('img/assets/cur.svg');
+  }
+  .grid-unit {
+    width: 280px;
+    height: 350px;
+  }
+  .grid-unit img {
+    max-width: 100%;
+  }
+  .grid-unit p {
+    margin: 0;
+    float: left;
+    max-width: 222px;
+  }
+  p:nth-child(4) {
+    float: right;
+    text-align: right;
+    top: 0px;
+    z-index: 3;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: space-between;
+    align-content: space-evenly;
+    align-items: center;
+  }
+  .condensed {
+    letter-spacing: -1px;
+  }
+  .head {
+    margin: 32px 0;
+  }
+  .upper {
+    position: relative;
+    margin: 16px 0;
+    width:1641px;
+    height: 501px;
+  }
+  .upper img {
+    height: 100px;
+    margin-right: 16px;
+  }
+  .upper .type {
+    position: absolute;
+    height: 80px;
+    bottom: 0px;
+  }
+  .links {
+    grid-template-columns: repeat(5, min-content);
+  }
+  .links a {
+    color: gray;
+    text-decoration: none;
+    margin-bottom: 8px;
+  }
+  .links a:hover {
+    font-weight: bold;
+    color: white !important;
+  }
+  .active {
+    color: white !important;
+  }
+  .goto {
+    width: 280px;
+    height: 280px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    opacity: 0;
+    color: white;
+    transition: 0.3s;
+  }
+  .goto:hover {
+    opacity: 1;
+  }
+  .inner {
+    width: 280px;
+    height: 280px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inner img {
+    width: 80px;
+    height: min-content;
+  }
+  .inner span {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+  }
+  .banner {
+    width: calc(875px - 16px);
+    text-align: center;
+    padding: 8px;
+    color: black;
+    background: white;
+    margin-top: -16px;
+    margin-bottom: 16px;
+  }
+  .banner a {
+    color: black;
+  }
+  .banner a:hover {
+    font-weight: bold;
+  }
+  hr {
+    color: white;
+    background: white;
+  }
+  ::-webkit-scrollbar {
+    width: 1.3vw;
+    padding: 8px;
+    transition: 0.3s;
+  }
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #222;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #444;
+  }
+  .marquee {
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -5;
+  }
+  svg {
+    display: block;
+  }
+  .logo {
+    fill: #fff;
+    z-index: -5;
+  }
+  .marquee-parent {
+    z-index: -6;
+    display: block;
+    width: 100vw;
+    width: 100vh;
+    position: absolute;
+  }
+  .ad {
+    padding: 0px;
+    width: 875px;
+    margin-top: 0px;
+  }
+  #cc {
+    width: 300px;
+  }

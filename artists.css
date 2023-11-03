@@ -1,0 +1,121 @@
+.FeaturedArtist {
+    width: 416px;
+    height: 345px;
+    overflow: hidden;
+}
+.featuredContainer {
+    display: grid;
+    width: 850px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.featuredArtistLogo {
+    z-index: 6;
+    position: relative;
+    pointer-events: none;
+    transition: 0.07s;
+}
+
+#s3co {
+    width: 337px;
+    left: 38px;
+}
+#zwei {
+    width: 177px;
+    left: 23.5px;
+}
+
+.blub {
+    color: white;
+    position: relative;
+    top: -850px;
+    text-align: center;
+    font-family: "Arial Narrow";
+    letter-spacing: -0.04em;
+    opacity: 0;
+    z-index: 9;
+    transition: 0.78s;
+}
+
+#zb {
+    top: -697px;
+}
+
+.seeMore {
+    height: 277px;
+    z-index: 5;
+    position: relative;
+    pointer-events: none;
+    transition: 0.12s;
+    top: -558px;
+    left: -100px;
+}
+
+.featuredArtistIMG {
+    width: 416px;
+    height: 277px;
+    object-fit: cover;
+    transition: 0.07s;
+}
+.featuredArtistIMG:hover {
+    filter: brightness(50%) contrast(200%);
+    cursor: pointer;
+}
+.shade {
+    width: 416px;
+    height: 277px;
+    position: relative;
+    top: -280px;
+    z-index: 5;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 82%, rgba(0,0,0,1) 100%);
+    pointer-events: none;
+}
+.Artist .shade {
+    width: 100%;
+    height: 100%;
+    top: -188px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 68%, rgba(0,0,0,0.5) 92%, rgba(0,0,0,0.7) 100%);
+    opacity: 0.8;
+    mix-blend-mode:color-burn;
+}
+.FeaturedArtist:nth-last-of-type() {
+    margin-right: 0px;
+}
+#bg {
+    width: 840px;
+    opacity: 0.5;
+    z-index: -3;
+    position: fixed;
+}
+#ag {
+    width: 840px; 
+    height: 98px;
+    margin-top: -19px; 
+    z-index: -1; 
+    position: relative;
+    object-fit: cover;
+}
+.roster {
+    display: grid;
+    width: 800px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.Artist {
+    background: red;
+    width: 275.7px;
+    height: 184px;
+    margin-right: 7px;
+    margin-bottom: 14px;
+}
+.artistIMG {
+    width: 100%;
+    height: 184px;
+    object-fit: cover;
+}
+.artistLogo {
+    width: 64%;
+    z-index: 6;
+    position: relative;
+    top: -229px;
+    left: 49px;
+}
